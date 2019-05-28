@@ -21,6 +21,7 @@ public class ByteUtils {
     public static byte[] int2Bytes(int value,int len){
         byte[] b = new byte[len];
         for(int i = 0;i < len;i++){
+            /*value>>8*i是value/2的(8*i)次方的优化写法，& 0xff 是按位与，即满256进1，因为一个字节位8位二进制最多表示255*/
             b[len-i-1] = (byte)((value >> 8*i) & 0xff);
         }
         return b;
