@@ -12,7 +12,9 @@ public class ByteUtils {
         int end = start + len;
         for(int i = start;i < end;i++){
             int n = ((int)b[i]) & 0xff;
+            /*将高位左移--len*8位，即n*(2的((--len)*8)次方),因为len=2,所以高位右移8位，n*256*/
             n <<= (--len) * 8;
+            /*将高位与低位相加得到十进制int数*/
             sum = n + sum;
         }
         return sum;
@@ -36,8 +38,11 @@ public class ByteUtils {
 
     public static byte[] bytesReplace(byte[] srcBytes,int offset,int len,byte[] destBytes){
         byte[] newBytes = new byte[srcBytes.length + (destBytes.length - len)];
+        /*将源Class字节码从0到需要替换的字节码的偏移位置offset这段字节码复制到新的newBytes[]中位置不变*/
         System.arraycopy(srcBytes,0,newBytes,0,offset);
+        /*将目标字节码（需要替换为的字节码）复制到newBytes[]的需要替换的字节码的位置offset，匹配长度*/
         System.arraycopy(destBytes,0,newBytes,offset,destBytes.length);
+        /*将剩余不需要替换的字节码复制到newBytes的对应位置*/
         System.arraycopy(srcBytes,offset+len,newBytes,offset+destBytes.length,srcBytes.length-offset-len);
         return newBytes;
     }
