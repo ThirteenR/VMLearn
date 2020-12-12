@@ -13,7 +13,7 @@ import java.util.Set;
  **/
 
 @SupportedAnnotationTypes("*")
-@SupportedSourceVersion(SourceVersion.RELEASE_6)
+@SupportedSourceVersion(SourceVersion.RELEASE_8)
 public class CheckNameProcessor extends AbstractProcessor {
     private NameChecker nameChecker;
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
