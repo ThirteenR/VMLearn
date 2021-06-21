@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="6" />
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
-    <option name="ADDITIONAL_OPTIONS_STRING" value="javac -proccessor $PROJECT_DIR$/out/production/VMLearn/process/CheckNameProcessor" />
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="VMLearn" options="" />
+    </option>
   </component>
 </project>

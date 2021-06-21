@@ -1,6 +1,5 @@
 package process;
 
-import com.sun.org.apache.xerces.internal.dom.ElementNSImpl;
 
 import javax.annotation.processing.Messager;
 import javax.annotation.processing.ProcessingEnvironment;

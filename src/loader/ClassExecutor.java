@@ -16,7 +16,7 @@ public class ClassExecutor {
         Class aClass = hotSwapClassLoader.loadByte(bytes);
         try {
             Method main = aClass.getMethod("main", new Class[]{String[].class});
-            main.invoke(null,new String[]{null});
+            main.invoke(null,new Object[]{null});
         } catch (Exception e) {
             e.printStackTrace(HackSystem.out);
         }
