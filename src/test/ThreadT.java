@@ -14,7 +14,7 @@ import java.util.Map;
  * Description:
  **/
 public class ThreadT{
-  //  private final static String a = "qwe";
+    public static final String a="ff";
 
     public  int a()  {
               int i=1;
@@ -27,7 +27,7 @@ public class ThreadT{
     }
 
     public static void main(String[] args) throws Exception {
-        FileInputStream fileInputStream = new FileInputStream("D:\\GitHub\\VMLearn\\out\\production\\VMLearn\\test\\TestConstantE.class");
+        FileInputStream fileInputStream = new FileInputStream("/Users/thirteen/IdeaProjects/VMLearn/out/production/VMLearn/test/TestConstantE.class");
         byte[] bytes = new byte[fileInputStream.available()];
         fileInputStream.read(bytes);
         fileInputStream.close();
